@@ -15,7 +15,7 @@ public class ApiReader {
 
     private ApiReader () {}
 
-    public static String getCountryOfCity(String city) throws IOException {
+    public static String getCountry(String city) throws IOException {
         JsonObject jsonObject = readURLAsJsonObject(ENDPOINT + "/" + city);
         JsonObject location = jsonObject.getAsJsonObject("network").getAsJsonObject("location");
         return location.get("country").getAsString();
