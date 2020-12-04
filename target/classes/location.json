@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "location",
+  "type": "object",
+  "properties": {
+    "city": {
+      "description": "city",
+      "type": "string"
+    },
+    "country": {
+      "description": "country",
+      "type": "string"
+    },
+    "latitude": {
+      "type": "number",
+      "minimum": -90,
+      "exclusiveMinimum": false
+    },
+    "longitude": {
+      "type": "number",
+      "minimum": -180,
+      "exclusiveMinimum": false
+    }
+  },
+  "required": ["city", "country", "latitude", "longitude"]
+}
